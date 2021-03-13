@@ -3,51 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Operadores lógicos</title>
+    <title>Página modelo</title>
     <script>
         // Ativa verificações adicionais de variáveis
-        // Módulo "chato" do JavaScript
+        // Modo "chato" do JavaScript
         'use strict'
 
-        /* Operadores lógicos em JS
+        /* OPERADORES LÓGICOS EM JS
             && -> E lógico (AND)
             || -> OU lógico (OR)
-            ! -> NÃO lógico
+            !  -> NÃO lógico (NOT)
         */
-       let a = 5, b=10, c= 0
+        let a = 5, b = 10, c = 0
 
-        //Testando o &&
+        // TESTANDO O OPERADOR &&
 
-       document.write(a > 1 && b < 15)
-       document.write('<br>') // <br> = breaking row(quebra de linha)
-       document.write(b === 10 && c < 0)
-       document.write('<hr>')// <hr> = horizontal ruler (traço horizontal)
+        document.write(a > 1 && b < 15)
 
-       if(a>1 && b <15) {
-           document.write('A condição é verdadeira')
-       }
-       else {
-           document.write('A condição é falsa.')
-       }
+        // <br> = breaking row (quebra de linha)
+        document.write('<br>')  
+        document.write(b === 10 && c < 0)
 
-       document.write('<hr>')
+        // <hr> = horizontal ruler (traço horizontal)
+        document.write('<hr>')
 
-       // Testando o operador || (pipe pipe)
-       // != --> operador de diferença
-       //!== --> operador de diferença exata
-       document.write( a===5 || c!==0 )
-       document.write('<hr>')
-       document.write(b !==10 || a!==5 )
+        if(a > 1 && b < 15) {
+            document.write('A condição é verdadeira')
+        }
+        else {
+            document.write('A condição é falsa')
+        }
 
-       document.whrite ('<hr>')
+        document.write('<hr>')
 
-    //TESTANDO O OPERADOR ! (NOT)
-    // ORDERM DE RESOLUÇÃO DOS OPERADORES LÓGICOS
-    //1º !
-    //2º &&
-    //3º ||
-    // ESSA ORDER PODE SER MODIFICADA COM O USO DE PARENTESES()
-document.write(!(a== 0 && b> 20))
+        // TESTANDO O OPERADOR || (pipe pipe)
+        // !=  -> operador de diferença
+        // !== -> operador de diferença exata (exatamente diferente)
+        document.write(a === 5 || c !== 0)
+        document.write('<hr>')
+        document.write(b !== 10 || a !== 5)
+
+        document.write('<hr>')
+
+        // TESTANDO O OPERADOR ! (not)
+        // Ordem de resolução dos operadores lógicos
+        // 1º: !
+        // 2º: &&
+        // 3º: ||
+        // Essa ordem pode ser modificada com o uso de () 
+        document.write(!(a === 0 && b > 20))
+
     </script>
 </head>
 <body>

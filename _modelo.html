@@ -4,10 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script>
-         // Ativa verificações adicionais de variáveis
-        // Módulo "chato" do JavaScript
+     <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
         'use strict'
+                
+        /*
+            Solicite ao usuário para informar dois números e um operador
+            matemático. Você usará três prompt(), um para cada número e
+            o terceiro para o operador.
+            Aceite os seguintes operadores:
+            + => adição
+            - => subtração
+            *, X ou x => multiplicação
+            / ou : => divisão
+            Efetue o cálculo apropriado de acordo com o operador informado
+            e informe o resultado usando document.write().
+        */
+
+        let num1 = parseFloat(prompt('Informe um número:'))
+        let num2 = parseFloat(prompt('Informe outro número'))
+        let oper = prompt('Informe um operador (+ - * X x / :):')
+
+        // Validação da entrada numérica
+        if(isNaN(num1) || isNaN(num2)) {
+            alert('ERRO: Os valores informados não correspondem a números válidos!')
+        }
+        else {
+            // switch..case é uma estrutura de decisão que compara uma única variável
+            // contra uma série de valores
+            switch(oper) {
+                case '+':
+                    document.write(`${num1} + ${num2} é igual a ${num1 + num2}`)
+                    break   // Interrompe a execução do switch
+
+                case '-':
+                    document.write(`${num1} - ${num2} é igual a ${num1 - num2}`)
+                    break
+                
+                case '*':   // case vazio
+                case 'X':   // case vazio
+                case 'x':
+                    document.write(`${num1} * ${num2} é igual a ${num1 * num2}`)
+                    break
+                    
+                case '/':   // case vazio
+                case ':':
+                    document.write(`${num1} / ${num2} é igual a ${num1 / num2}`)
+                    break
+
+                default:    // "else" do switch
+                    alert('ERRO: o operador informado é inválido!')
+            }
+        }
+        /*
+        else if(oper === '+') {
+            document.write(`${num1} + ${num2} é igual a ${num1 + num2}`)
+        }
+        else if(oper === '-') {
+            document.write(`${num1} - ${num2} é igual a ${num1 - num2}`)
+        }
+        else if(oper === '*' || oper === 'X' || oper === 'x') {
+            document.write(`${num1} * ${num2} é igual a ${num1 * num2}`) 
+        }
+        else if(oper === '/' || oper === ':') {
+            document.write(`${num1} / ${num2} é igual a ${num1 / num2}`)    
+        }
+        else {
+            alert('ERRO: o operador informado é inválido!')
+        }
+        */
+
     </script>
 </head>
 <body>
