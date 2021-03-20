@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <script>
+        // 'use strict' impede que variáveis sejam declaradas
+        // sem o uso de let, var ou const
+        // Inicializar variáveis diretamente é má prática de
+        // programação
+        'use strict'
+                
+        //5! = 5*4*3*2*1(120)
+        //4! = 4*3*2*1
+
+        let fat5 = 1
+        for(let i=5; i>1; i--){
+            fat5 = fat5 + i
+        }
+        alert ('O fatorial de 5 é' + fat5)
+
+        let fat4 =1
+        for(let i=4; i>1;i--){
+            fat4 = fat4 *1
+        }
+        alert ('O fatorial de 4 é:' + fat4)
+
+        // Principio DRY= Don't repeat yourself (não se repita)
+
+        // Função é um trecho de código que é escrito apenas uma vez
+        //pode ser invocado (executado) varias vezes
+
+        //fatorial --> nome da função
+        //num --> parametro ou argumento da função
+        function fatorial(num){
+            let fat=1
+            for(let i=1; i>1;i--){
+                fat*= i // Equivale a:  fat = fat * 1
+            }
+            return fat // retorno da função
+        }
+
+        //Chamada de função. O valor retornado pela função será
+        //atribuido a variavel x
+        let x = fatorial(5)
+        let y =  fatorial(4)
+        alert('O fatorial de 5 calculando pela função é : ' + x)
+        alert('O fatorial de 4 calculando pela função é : ' + y)
+
+
+        // Função para calcular a area de uma das seguintes formas geometricas:
+        // Quadrilatero, triagunlo e de elipse
+        function calcArea(base, altura,forma){
+            let area
+            switch(forma){
+                case "Q" : // Quadrilatero
+                    area = base * altura
+                    break
+                case "T" : // Triangulo
+                    area = base * altura /2
+                    break
+                case "E" : // Elipse
+                    area = (base / 2)*(altura / 2) * Math.PI
+                    break
+                default: // formas invalidas
+                    area = NaN  // area invalida
+            }
+            return area
+        }
+        let areaTerreno = calcArea(8,25,'Q') // Chamada da função
+        alert ('Area do Terreno:' + areaTerreno)
+
+        //chamada de função direta dentro do alert
+        alert ('Area do Triangulo: ' + calcArea(7,5,'T'))
+
+        alert('Area da Elipse: ' + calcArea(2,3,'E'))
+
+        alert('Area de uma forma não suportada:' + calcArea())
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
