@@ -26,15 +26,46 @@
             2020: bissexto
             2000: bissexto
             2013: não é
-      */
-        let ano = parseInt(prompt('Informe um Ano '))
 
-        if( (ano%400 === 0) || (ano%4===0 && ano%100!==0) ){
-            alert("É bissexto");}
-        else if (isNan(ano)){
-            alert("Ano informado não é valido")}
-        else{
-            alert("Não é bissexto");}
+            A regra vale para anos >= 1582
+      */
+        let ano = parseInt(prompt('Informe um ano maior ou igual a 1582'))
+
+        /*
+        if(isNaN(ano) || ano < 1582) {
+            alert('ERRO: o ano informado é inválido!')
+        }
+        // Ano divisível por 400 é sempre bissexto
+        else if(ano % 400 === 0) {
+            alert('O ano ' + ano + ' é bissexto.')
+        }
+        // Se não, o ano pode ainda ser bissexto caso seja divisível por 4
+        // mas NÃO seja divisível por 100
+        // Outra forma: else if(ano % 4 === 0 && ano % 100 !== 0)
+        // Ainda outra forma: else if(ano % 4 === 0 && ano % 100 > 0)
+        else if(ano % 4 === 0 && !(ano % 100 === 0)) {
+            alert('O ano ' + ano + ' é bissexto.')
+        }
+        else {
+            alert('O ano ' + ano + ' NÃO é bissexto.')
+        }
+        */
+
+        if(isNaN(ano) || ano < 1582){
+            alert('ERRO: O ano informado é inválido!')
+        }
+        //Todas as regras de bissexto em uma unica expressao
+        else if (ano % 400 === 0 || (ano % 4 === 0 && !(ano % 100 === 0))){
+            //alert('O ano ' + ano + ' é bissexto.')
+            //Mensagem usando string template com interpolacao de variavel
+            alert('O ano ${ano} é bissexto!')
+        }
+        else {
+            // alert('O ano ' + ano + ' NÃO é bissexto.')
+            // Mensagem usando string template com interpolação de variável
+            alert('O ano ${ano} NÃO é bissexto!')
+        }
+        
     </script>
 </head>
 <body>

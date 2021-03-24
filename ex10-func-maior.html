@@ -3,38 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-     <script>
-        // 'use strict' impede que variáveis sejam declaradas
-        // sem o uso de let, var ou const
-        // Inicializar variáveis diretamente é má prática de
-        // programação
+    <title>Página modelo</title>
+    <script>
+        // Ativa verificações adicionais de variáveis
+        // Modo "chato" do JavaScript
         'use strict'
-            
+
         /*
-            Escreva uma funçao que receba dois números e retorne o maior entre ele
-            Retorne undefined caso os número sejam iguais entre si.
+            Escreva uma função que receba dois números e retorne o maior entre eles.
+            Retorne undefined caso os números sejam iguais entre si.
         */
-       
-        function maior(num1, num2){
+
+        // Declaração da função
+        function maior(num1, num2) {
             let resultado
-                if(num1> num2){
-                    resultado = num1
-                }
-                else if(num2 > num1){
-                    resultado = num2
-                }
-                else { // são iguais
-                    resultado = undefined   
-                }
-                    return resultado
-            }       
+            if(num1 > num2) {
+                resultado = num1
+            }
+            else if(num2 > num1) {
+                resultado = num2
+            }
+            else {      // São iguais
+                resultado = undefined
+            }
+            return resultado   
+        }
 
-            alert ('O maior número entre 5 e 9 é: ' + maior(5,9))
-            alert ('O maior número entre 14 e 11 é: ' + maior(14,11))
-            alert ('O maior número entre 8 e 8 é: ' + maior(8,8))
-
-
+        // Chamadas de função
+        alert('O maior número entre 5 e 9 é ' + maior(5, 9))
+        alert('O maior número entre 14 e 11 é ' + maior(14, 11))
+        alert('O maior número entre 8 e 8 é ' + maior(8, 8))
+        
     </script>
 </head>
 <body>
