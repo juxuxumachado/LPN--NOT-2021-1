@@ -58,24 +58,42 @@
                 passe um traço horizontal (<hr>).            
         */
      
-            let estacao2119= [] //Criação de vetor vazio
-            estacao2119.push('Santa Teresinha ',' Estação ',' Centro ',' Jardim Lima ',' Aeroporto I ')// inserindo valores no vetor
-            
-            for(let i = 0; i < estacao2119.length; i++) {
-            
-            document.write(estacao2119[i] + '<br>')
+            let estacao= []
+            estacao.push('Santa Teresinha ',' Estação ',' Centro ',' Jardim Lima ',' Aeroporto I ')
+            for(let i = 0; i < estacao.length; i++) {
+            document.write(estacao[i] + '<br>')
         }
-
             document.write('<hr>')
-            estacao2119.unshift('City Petrópolis')// inserindo valor no inicio (NORTE)
-            estacao2119.push('Aeroporto IV')
 
-            for(let elemento of estacao2119) {
-            
+            estacao.unshift('City Petrópolis')
+            estacao.push('Aeroporto IV')
+            for(let elemento of estacao) {
             document.write(elemento + '<br>')
         }
+            document.write('<hr>')
 
-        document.write('<hr>')
+
+            estacao.splice(2,0,'Vila Imprerador')
+            estacao.splice(6,0,'Jardim Alvorada')
+            for (let i = estacao.length-1; i>=0; i--){
+	        document.write(estacao[i] +'<br>')
+        }
+            document.write('<hr>')
+            
+
+            estacao.splice(4, 1, '9 de Julho','Champagnat')
+            for(let i = 0; i < estacao.length; i++){
+	        document.write(estacao[i] +'<br>')
+        }
+            document.write('<hr>')
+            
+
+            estacao.splice(8, 2)
+            estacao.splice(1,1)
+            for(let elemento of estacao) {
+            document.write(elemento + '<br>')
+        }
+            document.write('<hr>')
     </script>
 </head>
 <body>
