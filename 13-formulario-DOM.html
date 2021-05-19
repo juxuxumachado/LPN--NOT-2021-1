@@ -94,8 +94,8 @@
         // Ativa verificações adicionais de variáveis
         // Modo "chato" do JavaScript
         'use strict'
-        
-         /* Captura dos elementos */
+
+        /* Captura dos elementos */
         const elPrimeiroNome = document.getElementById('primeiro-nome')
         const elSobrenome = document.getElementById('sobrenome')
         const elFormaTratamento = document.getElementById('forma-tratamento')
@@ -110,13 +110,14 @@
         function validar() {
             // Retorna true caso todos os campos do formulário tiverem
             // sido preenchidos corretamente, ou false, caso contrário
-
+            
             if(elPrimeiroNome.value === '') {
                 alert('O primeiro nome deve ser preenchido.')
                 elPrimeiroNome.focus()  // Coloca o cursor no campo
                 return false
             }
         }
+
     </script>
 </body>
 </html>

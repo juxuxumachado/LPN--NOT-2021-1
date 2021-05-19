@@ -21,27 +21,18 @@
             os dois valores informados (inclusive).            
         */
 
-       let numero1, numero2, soma = 0
-            let menor, maior
-                do{
-                    numero1 = parseInt(prompt('Informe o primeiro número inteiro'))
-                    numero2 = parseInt(prompt("Informe o segundo número inteiro"))
-                }while(isNaN(numero1) || isNaN(numero2) || numero1 === numero2)
-                        
-                    if(numero1 > numero2) {
-                    maior = numero1
-                    menor = numero2
-                 }
-                else {
-                    maior = numero2
-                    menor = numero1
-                }
+       let num1, num2, maior, menor
 
-                for(let i = menor; i <= maior; i++) {
-                    soma += i
-                 }
+       // do..while que pede e valida num1 e num2
 
-                alert(`A soma dos números entre ${menor} e ${maior} é ${soma}.`)
+       if(num1 < num2) {
+           menor = num1
+           maior = num2
+       }
+       else {
+           menor = num2
+           maior = num1
+       }
 
     </script>
 </head>
