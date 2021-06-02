@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html lang="pt-br" xmlns:mso="urn:schemas-microsoft-com:office:office" xmlns:msdt="uuid:C2F41010-65B3-11d1-A29F-00AA00C14882">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modelo de documento HTML</title>
+</head>
+<body>
+    <h1>Estados do Sudeste e do Sul do Brasil</h1>
+    <ul>
+
+    </ul>
     <script>
         // 'use strict' impede que variáveis sejam declaradas
         // sem o uso de let, var ou const
@@ -13,6 +19,11 @@
         
         /*
             1) Crie um vetor vazio.
+        */
+
+        let estados = []
+
+        /*
 
             2) Usando o método de inserção NO INÍCIO do vetor, coloque os seguintes Estados
                no vetor:
@@ -24,24 +35,32 @@
                Minas Gerais
                Espírito Santo
 
+        */
+
+        estados.unshift('São Paulo')
+        estados.unshift('Santa Catarina')
+        estados.unshift('Rio Grande do Sul') 
+        estados.unshift('Rio de Janeiro')
+        estados.unshift('Paraná')
+        estados.unshift('Minas Gerais')
+        estados.unshift('Espírito Santo')       
+
+        /*
+
             3) Percorra o vetor com um loop for..of, crie um item de lista para cada
                um dos elementos do vetor e insira-o na lista não ordenada.
 
         */
+
+        // Captura do elemento ul
+        const lista = document.querySelector('ul')
+
+        for(let estado of estados) {
+            let item = document.createElement('li')
+            item.textContent = estado
+            lista.appendChild(item)
+        }
             
     </script>
-
-<!--[if gte mso 9]><xml>
-<mso:CustomDocumentProperties>
-<mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers msdt:dt="string">Desenvolvimento Web I-A-N-D.S.M.-109-20211 Members</mso:display_urn_x003a_schemas-microsoft-com_x003a_office_x003a_office_x0023_SharedWithUsers>
-<mso:SharedWithUsers msdt:dt="string">100;#Desenvolvimento Web I-A-N-D.S.M.-109-20211 Members</mso:SharedWithUsers>
-</mso:CustomDocumentProperties>
-</xml><![endif]-->
-</head>
-<body>
-    <h1>Estados do Sudeste e do Sul do Brasil</h1>
-    <ul>
-
-    </ul>
 </body>
 </html>
